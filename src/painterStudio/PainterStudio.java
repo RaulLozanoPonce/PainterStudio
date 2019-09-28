@@ -19,9 +19,9 @@ public class PainterStudio extends javax.swing.JFrame {
         board.setBackground(Color.white);
         pencilThicknessSlider.setPaintTicks(true);
         pencilThicknessSlider.setPaintLabels(true);
-        pencilThicknessSlider.setMinimum(0);
-        pencilThicknessSlider.setMaximum(20);
-        pencilThicknessSlider.setValue(10);
+        pencilThicknessSlider.setMinimum(2);
+        pencilThicknessSlider.setMaximum(22);
+        pencilThicknessSlider.setValue(11);
         pencilThicknessSlider.setMajorTickSpacing(2);
     }
 
