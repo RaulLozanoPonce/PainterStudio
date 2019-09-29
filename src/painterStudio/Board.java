@@ -25,7 +25,6 @@ public class Board extends javax.swing.JPanel{
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
-        
         drawCircles(g2d, points);
     }
     
@@ -60,10 +59,10 @@ public class Board extends javax.swing.JPanel{
     }
     
     private void drawCircles(Graphics2D g2d, Point2D[] trail){
+        g2d.setColor(pencilColor);
         for (int i = 0; i < trail.length; i++) {
-            g2d.setColor(pencilColor);
-            if(trail[i] instanceof Point2D) g2d.fillOval((int) trail[i].getX(), 
-                    (int) trail[i].getY(), pencilThickness, pencilThickness);
+            if(trail[i] instanceof Point2D)
+                g2d.fillOval((int) trail[i].getX(), (int) trail[i].getY(), pencilThickness, pencilThickness);
         }
     }
     

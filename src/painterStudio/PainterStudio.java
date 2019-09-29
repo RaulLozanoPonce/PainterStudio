@@ -9,20 +9,20 @@ public class PainterStudio extends javax.swing.JFrame {
     
     private int mouseX = 0;
     private int mouseY = 0;
-    Timer timer;
-    TimerTask timerTask;
+    private Timer timer;
+    private TimerTask timerTask;
     
     
 
     public PainterStudio() {
         initComponents();
         board.setBackground(Color.white);
-        pencilThicknessSlider.setPaintTicks(true);
-        pencilThicknessSlider.setPaintLabels(true);
-        pencilThicknessSlider.setMinimum(2);
-        pencilThicknessSlider.setMaximum(22);
-        pencilThicknessSlider.setValue(11);
-        pencilThicknessSlider.setMajorTickSpacing(2);
+        thicknessPencilSlider.setPaintTicks(true);
+        thicknessPencilSlider.setPaintLabels(true);
+        thicknessPencilSlider.setMinimum(2);
+        thicknessPencilSlider.setMaximum(22);
+        thicknessPencilSlider.setValue(11);
+        thicknessPencilSlider.setMajorTickSpacing(2);
     }
 
     /**
@@ -42,7 +42,7 @@ public class PainterStudio extends javax.swing.JFrame {
         colorPencilComboBox = new javax.swing.JComboBox<>();
         titleLabel = new javax.swing.JLabel();
         thicknessPanel = new javax.swing.JPanel();
-        pencilThicknessSlider = new javax.swing.JSlider();
+        thicknessPencilSlider = new javax.swing.JSlider();
         thicknessPencilLabel = new javax.swing.JLabel();
         authorsLabel = new javax.swing.JLabel();
 
@@ -136,9 +136,9 @@ public class PainterStudio extends javax.swing.JFrame {
 
         thicknessPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Grosor"));
 
-        pencilThicknessSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+        thicknessPencilSlider.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                pencilThicknessSliderStateChanged(evt);
+                thicknessPencilSliderStateChanged(evt);
             }
         });
 
@@ -153,7 +153,7 @@ public class PainterStudio extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(thicknessPencilLabel)
                 .addGap(18, 18, 18)
-                .addComponent(pencilThicknessSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(thicknessPencilSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         thicknessPanelLayout.setVerticalGroup(
@@ -161,7 +161,7 @@ public class PainterStudio extends javax.swing.JFrame {
             .addGroup(thicknessPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(thicknessPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pencilThicknessSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(thicknessPencilSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(thicknessPencilLabel))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -239,9 +239,9 @@ public class PainterStudio extends javax.swing.JFrame {
         board.changePencilColor((String) colorPencilComboBox.getSelectedItem());
     }//GEN-LAST:event_colorPencilComboBoxActionPerformed
 
-    private void pencilThicknessSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_pencilThicknessSliderStateChanged
-        board.changePencilThickness(pencilThicknessSlider.getValue());
-    }//GEN-LAST:event_pencilThicknessSliderStateChanged
+    private void thicknessPencilSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_thicknessPencilSliderStateChanged
+        board.changePencilThickness(thicknessPencilSlider.getValue());
+    }//GEN-LAST:event_thicknessPencilSliderStateChanged
 
     /**
      * @param args the command line arguments
@@ -286,9 +286,9 @@ public class PainterStudio extends javax.swing.JFrame {
     private javax.swing.JPanel colorPanel;
     private javax.swing.JComboBox<String> colorPencilComboBox;
     private javax.swing.JLabel colorPencilLabel;
-    private javax.swing.JSlider pencilThicknessSlider;
     private javax.swing.JPanel thicknessPanel;
     private javax.swing.JLabel thicknessPencilLabel;
+    private javax.swing.JSlider thicknessPencilSlider;
     private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables
 }

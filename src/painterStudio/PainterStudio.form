@@ -227,7 +227,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="thicknessPencilLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="pencilThicknessSlider" min="-2" pref="350" max="-2" attributes="0"/>
+                  <Component id="thicknessPencilSlider" min="-2" pref="350" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -237,7 +237,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="pencilThicknessSlider" min="-2" max="-2" attributes="0"/>
+                      <Component id="thicknessPencilSlider" min="-2" max="-2" attributes="0"/>
                       <Component id="thicknessPencilLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -246,9 +246,9 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JSlider" name="pencilThicknessSlider">
+        <Component class="javax.swing.JSlider" name="thicknessPencilSlider">
           <Events>
-            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="pencilThicknessSliderStateChanged"/>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="thicknessPencilSliderStateChanged"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="thicknessPencilLabel">
